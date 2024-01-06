@@ -34,6 +34,11 @@ const mainContent = document.createElement("div");
 mainContent.classList.add("main-content");
 content.appendChild(mainContent);
 
+// Tab holder
+const tabHolder = document.createElement("div");
+mainContent.appendChild(tabHolder);
+tabHolder.classList.add("tab-holder");
+
 // Footer
 const footer = document.createElement("footer");
 const footerText = document.createElement("p");
