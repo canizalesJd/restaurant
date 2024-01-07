@@ -1,0 +1,85 @@
+const addMenuTab = () => {
+	const tabHolder = document.querySelector(".tab-holder");
+	tabHolder.innerHTML = "";
+
+	const menuTab = document.createElement("div");
+	menuTab.classList.add("tab");
+	menuTab.classList.add("menu");
+	tabHolder.appendChild(menuTab);
+
+	const menuTitle = document.createElement("h2");
+	menuTitle.textContent = "Taste our Gastronomic Delights";
+	menuTitle.classList.add("large-title");
+	menuTab.appendChild(menuTitle);
+
+	const menuDescription = document.createElement("p");
+	menuDescription.textContent =
+		"Embark on a culinary odyssey at Raffinement. Our menu is a testament to the art of gastronomy, meticulously curated to elevate your dining experience. From succulent steaks to exquisite seafood and delightful vegetarian options, each dish is a symphony of flavors crafted with passion and precision.";
+	menuTab.appendChild(menuDescription);
+
+	const menuOptionsContainer = document.createElement("div");
+	menuOptionsContainer.classList.add("menu-options");
+	menuTab.appendChild(menuOptionsContainer);
+
+	// Mapping menu options
+	const menuOptions = [
+		{
+			name: "Truffle-infused Filet Mignon",
+			description:
+				"Prime filet mignon delicately seasoned and grilled to perfection, topped with a decadent truffle-infused demi-glace. Served with roasted garlic mashed potatoes and sautéed asparagus.",
+			src: "img/filet.jpg",
+		},
+		{
+			name: "Pan-seared Sea Bass with Citrus Beurre Blanc",
+			description:
+				"Fresh sea bass fillet pan-seared to a golden crisp, accompanied by a luscious citrus beurre blanc sauce. Paired with wild rice pilaf and steamed French beans.",
+			src: "img/fish.jpg",
+		},
+		{
+			name: "Lobster Ravioli in Champagne Cream Sauce",
+			description:
+				"Handcrafted lobster-filled ravioli bathed in a luxurious champagne cream sauce, garnished with chives and Parmesan. A harmonious blend of flavors for the seafood connoisseur.",
+			src: "img/lobster-ravioli.jpg",
+		},
+		{
+			name: "Duck Confit with Blackberry Gastrique",
+			description:
+				"Slow-cooked duck leg confit, crisped to perfection, drizzled with a blackberry gastrique. Served alongside sweet potato puree and caramelized Brussels sprouts.",
+			src: "img/duck-confit.jpeg",
+		},
+		{
+			name: "Miso-glazed Chilean Sea Bass",
+			description:
+				"Chilean sea bass marinated in a savory miso glaze, oven-roasted to a succulent finish. Accompanied by ginger-infused jasmine rice and stir-fried baby bok choy.",
+			src: "img/chilean-sea-bass.jpeg",
+		},
+		{
+			name: "Grilled Lamb Chops with Rosemary Demi-Glace",
+			description:
+				"Tender lamb chops marinated in a blend of aromatic herbs, grilled to perfection, and drizzled with a rich rosemary-infused demi-glace. Accompanied by garlic mashed potatoes and sautéed seasonal vegetables.",
+			src: "img/lamb-chops.jpg",
+		},
+	];
+
+	// Creating a menu card for each option
+	for (const option of menuOptions) {
+		const menuCard = document.createElement("div");
+		menuCard.classList.add("menu-card");
+		menuOptionsContainer.appendChild(menuCard);
+
+		const menuImage = document.createElement("img");
+		menuImage.src = option.src;
+		menuImage.alt = option.name;
+		menuCard.appendChild(menuImage);
+
+		const menuTitle = document.createElement("h3");
+		menuTitle.textContent = option.name;
+		menuCard.appendChild(menuTitle);
+
+		const menuDescription = document.createElement("p");
+		menuDescription.textContent = option.description;
+		menuCard.appendChild(menuDescription);
+	}
+};
+
+export default addMenuTab;
