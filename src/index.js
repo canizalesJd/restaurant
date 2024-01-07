@@ -61,8 +61,7 @@ const cleanActive = () => {
 };
 
 // Add home tab by default
-// addHomeTab();
-addContactTab();
+addHomeTab();
 home.classList.add("active");
 home.addEventListener("click", () => {
 	addHomeTab();
