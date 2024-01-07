@@ -1,5 +1,6 @@
 import addHomeTab from "./home";
 import addMenuTab from "./menu";
+import addContactTab from "./contact";
 
 const content = document.getElementById("content");
 const header = document.createElement("header");
@@ -51,18 +52,34 @@ content.appendChild(footer);
 
 // Menu options
 const home = document.getElementById("home");
+
+const cleanActive = () => {
+	const menuItems = document.querySelectorAll(".menu-item");
+	menuItems.forEach((item) => {
+		item.classList.remove("active");
+	});
+};
+
 // Add home tab by default
-addHomeTab();
+// addHomeTab();
+addContactTab();
 home.classList.add("active");
 home.addEventListener("click", () => {
 	addHomeTab();
+	cleanActive();
 	home.classList.add("active");
-	menu.classList.remove("active");
 });
-
+// Add menu content
 const menu = document.getElementById("menu");
 menu.addEventListener("click", () => {
 	addMenuTab();
-	home.classList.remove("active");
+	cleanActive();
 	menu.classList.add("active");
+});
+
+const contact = document.getElementById("contact");
+contact.addEventListener("click", () => {
+	addContactTab();
+	cleanActive();
+	contact.classList.add("active");
 });
