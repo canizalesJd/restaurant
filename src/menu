@@ -13,6 +13,7 @@ const addMenuTab = () => {
 	menuTab.appendChild(menuTitle);
 
 	const menuDescription = document.createElement("p");
+	menuDescription.classList.add("description");
 	menuDescription.textContent =
 		"Embark on a culinary odyssey at Raffinement. Our menu is a testament to the art of gastronomy, meticulously curated to elevate your dining experience. From succulent steaks to exquisite seafood and delightful vegetarian options, each dish is a symphony of flavors crafted with passion and precision.";
 	menuTab.appendChild(menuDescription);
@@ -57,7 +58,7 @@ const addMenuTab = () => {
 			name: "Grilled Lamb Chops with Rosemary Demi-Glace",
 			description:
 				"Tender lamb chops marinated in a blend of aromatic herbs, grilled to perfection, and drizzled with a rich rosemary-infused demi-glace. Accompanied by garlic mashed potatoes and sautéed seasonal vegetables.",
-			src: "img/lamb-chops.jpg",
+			src: "img/lamb-chops.jpeg",
 		},
 	];
 
