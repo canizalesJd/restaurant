@@ -68,25 +68,23 @@ const menuHighlights = document.createElement("div");
 menuHighlights.classList.add("menu-highlights");
 homeTab.appendChild(menuHighlights);
 
+const menuHighlights_textContainer = document.createElement("div");
+menuHighlights.appendChild(menuHighlights_textContainer);
+menuHighlights_textContainer.classList.add("text-container");
+
 const menuHighlights_title = document.createElement("h2");
 menuHighlights_title.classList.add("medium-title");
 menuHighlights_title.textContent = "Menu Highlights";
-menuHighlights.appendChild(menuHighlights_title);
+menuHighlights_textContainer.appendChild(menuHighlights_title);
 
 const menuHighlights_description = document.createElement("p");
 menuHighlights_description.textContent =
 	"Explore our curated menu featuring signature dishes like our Gourmet Grilled Filet, a harmonious blend of delicate textures and bold flavors. Experience decadence with Royal Sea Bass Elegance, showcasing our commitment to gastronomic excellence. Each creation is a masterpiece, promising an unforgettable dining experience.";
-menuHighlights.appendChild(menuHighlights_description);
+menuHighlights_textContainer.appendChild(menuHighlights_description);
 
-const menuHighlights_images = document.createElement("div");
-menuHighlights.appendChild(menuHighlights_images);
-
-const menuHighlights_images_image1 = document.createElement("img");
-menuHighlights_images_image1.src = "img/filet.jpg";
-menuHighlights_images.appendChild(menuHighlights_images_image1);
-
-const menuHighlights_images_image2 = document.createElement("img");
-menuHighlights_images_image2.src = "img/fish.jpg";
-menuHighlights_images.appendChild(menuHighlights_images_image2);
+const menuHighlights_image1 = document.createElement("img");
+menuHighlights.appendChild(menuHighlights_image1);
+menuHighlights_image1.classList.add("menu-highlight-image");
+menuHighlights_image1.src = "img/filet.jpg";
 
 tabHolder.appendChild(homeTab);
