@@ -1,0 +1,318 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;800&family=Poppins:wght@400;700&display=swap");
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+/* Colors */
+:root {
+	--primary-100: #c7b299;
+	--primary-200: #a9957d;
+	--primary-300: #675640;
+	--accent-100: #a68b5b;
+	--accent-200: #483507;
+	--text-100: #3a3a3a;
+	--text-200: #797979;
+	--white: #fafafa;
+	--bg-100: #f5efe7;
+	--bg-200: #ebe5dd;
+	--bg-300: #c2bdb5;
+}
+
+body {
+	min-height: 100vh;
+	width: 100vw;
+	overflow-x: hidden;
+	font-family: "Poppins", sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	color: var(--text-100);
+	background-color: var(--white);
+	background: url(img/restaurant.jpg);
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#content {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+/* Font styles */
+.large-title {
+	font-size: 2rem;
+	font-weight: 700;
+}
+
+.medium-title {
+	font-size: 1.7rem;
+}
+
+h1,
+h2,
+h3 {
+	font-family: "Playfair Display", serif;
+	font-weight: 400;
+}
+
+/* Menu */
+header {
+	background: var(--white);
+}
+
+header nav {
+	display: flex;
+	flex-direction: column;
+}
+
+.header-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 0px;
+	max-height: 100px;
+}
+
+.header-container h1 {
+	font-weight: 800;
+	font-size: 2.5em;
+}
+
+.header-container h2 {
+	font-size: 1.5em;
+}
+
+header nav ul {
+	padding: 10px 0px;
+	max-height: 70px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+header nav ul li {
+	border-bottom: 3px solid transparent;
+}
+
+header nav ul li:hover {
+	transition: 300ms;
+	border-bottom: 3px solid var(--accent-100);
+}
+
+.menu-item {
+	text-decoration: none;
+	list-style: none;
+	margin: 0px 10px;
+	font-size: 1.3rem;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+.active {
+	transition: 300ms;
+	border-bottom: 3px solid var(--accent-100);
+}
+
+/* Footer */
+.footer {
+	position: relative;
+	bottom: 0;
+	left: 0;
+	color: var(--white);
+	padding: 10px 0px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer a {
+	font-weight: 700;
+	color: inherit;
+	text-decoration: none;
+}
+
+/* Tab */
+.tab {
+	padding: 5%;
+}
+
+.tab p {
+	color: var(--text-200);
+}
+
+.tab-holder {
+	position: relative;
+	background: var(--bg-100);
+	min-height: calc(100vh - 296px);
+	width: 900px;
+	max-width: 85vw;
+	margin: 3em auto;
+}
+
+/* Home sections */
+.about-us {
+	padding-bottom: 20px;
+}
+
+.menu-higlights {
+	padding-bottom: 20px;
+}
+
+.menu-highlights {
+	display: flex;
+	justify-content: space-between;
+}
+
+.menu-highlights .text-container {
+	width: 70%;
+}
+
+.menu-highlights .menu-highlight-image {
+	-webkit-user-drag: none;
+	max-height: 280px;
+	margin: 0px 20px;
+	object-fit: contain;
+	width: 300px;
+	max-width: 30%;
+	border-top-left-radius: 90px;
+	border-top-right-radius: 120px;
+}
+
+.chef-corner {
+	padding: 20px 0px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.chef-corner .chef-corner-image {
+	-webkit-user-drag: none;
+	max-height: 280px;
+	margin-top: 20px;
+	align-self: center;
+	object-fit: contain;
+	width: 350px;
+	border-bottom-left-radius: 100px;
+	border-bottom-right-radius: 140px;
+}
+
+/* Menu */
+
+.tab.description {
+	margin-bottom: 20px;
+}
+
+.menu-options {
+	margin-top: 20px;
+	display: grid;
+	gap: 20px;
+	grid-template-columns: repeat(2, 1fr);
+	max-width: 100%;
+	flex-wrap: wrap;
+}
+
+.menu-card {
+	padding: 40px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.menu-card h3 {
+	font-size: 1.5em;
+	margin: 10px 0px;
+}
+
+.menu-card img {
+	-webkit-user-drag: none;
+	width: 300px;
+	max-width: 100%;
+	object-fit: contain;
+	text-align: center;
+}
+
+/* Contact */
+.contact-container {
+	padding: 20px 0px;
+}
+
+.contact-info-title {
+	font-size: 1.6em;
+}
+
+.tab.contact {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.contact-image {
+	width: 500px;
+	max-width: 100%;
+	object-fit: contain;
+	align-self: left;
+	border-bottom-left-radius: 86px;
+}
+
+.contact-info {
+	padding: 10px 0px;
+	display: flex;
+	align-items: center;
+	font-size: 1.18em;
+}
+
+.contact-info.visitUs::before {
+	content: url("img/locationIcon.png");
+	padding-right: 5px;
+	margin-top: 10px;
+}
+.contact-info.callUs::before {
+	content: url("img/callIcon.png");
+	padding-right: 5px;
+	margin-top: 10px;
+}
+.contact-info.emailUs::before {
+	content: url("img/emailIcon.png");
+	padding-right: 5px;
+	margin-top: 10px;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 800px) {
+	.menu-highlights {
+		flex-direction: column;
+	}
+	.menu-highlights .text-container {
+		width: 100%;
+	}
+	.menu-highlights .menu-highlight-image {
+		margin: 20px 0px;
+		width: 400px;
+		max-width: 100%;
+		align-self: center;
+	}
+	.chef-corner-image {
+		max-height: 100% !important;
+		max-width: 80% !important;
+	}
+	.menu-options {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	body {
+		font-size: 14px;
+	}
+	.emailUs {
+		word-wrap: anywhere;
+		width: 200px;
+	}
+}
