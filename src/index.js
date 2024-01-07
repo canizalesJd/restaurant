@@ -87,4 +87,27 @@ menuHighlights.appendChild(menuHighlights_image1);
 menuHighlights_image1.classList.add("menu-highlight-image");
 menuHighlights_image1.src = "img/filet.jpg";
 
+const chefCorner = document.createElement("div");
+chefCorner.classList.add("chef-corner");
+homeTab.appendChild(chefCorner);
+
+const chefCorner_textContainer = document.createElement("div");
+chefCorner.appendChild(chefCorner_textContainer);
+chefCorner_textContainer.classList.add("text-container");
+
+const chefCorner_title = document.createElement("h2");
+chefCorner_title.classList.add("medium-title");
+chefCorner_title.textContent = "Chef's Corner";
+chefCorner_textContainer.appendChild(chefCorner_title);
+
+const chefCorner_description = document.createElement("p");
+chefCorner_description.textContent =
+	"Meet Auguste Gusteau and our culinary team, bringing several years of collective experience to the kitchen. Their passion for innovation and dedication to French cuisine infuse each dish with a distinctive flair. Bon appétit!";
+chefCorner_textContainer.appendChild(chefCorner_description);
+
+const chefCorner_image = document.createElement("img");
+chefCorner.appendChild(chefCorner_image);
+chefCorner_image.classList.add("chef-corner-image");
+chefCorner_image.src = "img/chef.jpg";
+
 tabHolder.appendChild(homeTab);
