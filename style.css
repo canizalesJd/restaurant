@@ -8,14 +8,15 @@
 /* Colors */
 :root {
 	--primary-100: #c7b299;
+	--primary-100-transparent: rgb(245, 239, 231, 0.94);
 	--primary-200: #a9957d;
 	--primary-300: #675640;
 	--accent-100: #a68b5b;
 	--accent-200: #483507;
 	--text-100: #3a3a3a;
-	--text-200: #797979;
+	--text-200: #585858;
 	--white: #fafafa;
-	--bg-100: #f5efe7;
+	--bg-100: #fbfaf9;
 	--bg-200: #ebe5dd;
 	--bg-300: #c2bdb5;
 }
@@ -28,12 +29,13 @@ body {
 	font-weight: 400;
 	font-size: 16px;
 	color: var(--text-100);
-	background-color: var(--white);
+	background-color: var(--bg-100);
 	background: url(img/restaurant.jpg);
 	background-position: center center;
 	background-attachment: fixed;
 	background-size: cover;
 	background-repeat: no-repeat;
+	overflow-x: hidden;
 }
 
 #content {
@@ -147,7 +149,7 @@ header nav ul li:hover {
 
 .tab-holder {
 	position: relative;
-	background: var(--bg-100);
+	background: var(--primary-100-transparent);
 	min-height: calc(100vh - 296px);
 	width: 900px;
 	max-width: 85vw;
@@ -281,6 +283,18 @@ header nav ul li:hover {
 	content: url("img/emailIcon.png");
 	padding-right: 5px;
 	margin-top: 10px;
+}
+
+/* Sticky menu */
+.stick-to-top {
+	position: fixed;
+	top: 0;
+	left: 0;
+	align-items: center;
+	background: var(--bg-100);
+	box-shadow: 0px 10px 10px rgba(37, 37, 37, 0.2);
+	z-index: 999;
+	width: 100vw;
 }
 
 /* Responsive */
