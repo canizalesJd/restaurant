@@ -28,6 +28,17 @@ const menuItems = [
 ];
 nav.appendChild(menuElement);
 
+// Stick menu to top on scroll
+window.onscroll = function () {
+	if (window.scrollY > 98) {
+		menuElement.classList.add("stick-to-top");
+	} else {
+		menuElement.classList.remove("stick-to-top");
+	}
+};
+
+// menuElement.classList.add("stick-to-top");
+
 for (const menuItem of menuItems) {
 	const menuItemElement = document.createElement("li");
 	menuItemElement.id = menuItem.id;
